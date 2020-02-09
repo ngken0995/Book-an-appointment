@@ -3,10 +3,9 @@
   "nbformat_minor": 0,
   "metadata": {
     "colab": {
-      "name": "Schedulev2.ipynb",
+      "name": "Schedule",
       "provenance": [],
-      "collapsed_sections": [],
-      "authorship_tag": "ABX9TyNmmfqauV4zww4kk+8twHt6",
+      "authorship_tag": "ABX9TyNagpcrxXIxjtiz2f85Heto",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -22,13 +21,26 @@
         "colab_type": "text"
       },
       "source": [
-        "<a href=\"https://colab.research.google.com/github/ngken0995/Book-an-appointment/blob/master/Schedule.ipynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+        "<a href=\"https://colab.research.google.com/github/ngken0995/Book-an-appointment/blob/master/Schedule.py\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
       ]
     },
     {
       "cell_type": "code",
       "metadata": {
-        "id": "wtS_uJGHKAEE",
+        "id": "Dcc6CNS99feG",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": 0,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "zOMV0IVD9mYg",
         "colab_type": "code",
         "colab": {}
       },
@@ -41,17 +53,18 @@
     {
       "cell_type": "markdown",
       "metadata": {
-        "id": "Bdiq-5d0KUo-",
+        "id": "NH3zRS8N9mmF",
         "colab_type": "text"
       },
       "source": [
-        "Patient / Doctor Scheduler - Create a patient class and a doctor class. Have a doctor that can handle multiple patients and setup a scheduling program where a doctor can only handle 16 patients during an 8 hr work day."
+        "Patient / Doctor Scheduler - Create a patient class and a doctor class. Have a doctor that can handle multiple patients and setup a scheduling program where a doctor can only handle 16 patients during an 8 hr work day.\n",
+        "\n"
       ]
     },
     {
       "cell_type": "code",
       "metadata": {
-        "id": "BY05rBT6SNnQ",
+        "id": "aCZKyG7U9kwW",
         "colab_type": "code",
         "colab": {}
       },
@@ -67,7 +80,7 @@
     {
       "cell_type": "code",
       "metadata": {
-        "id": "tzydCZUQfpgO",
+        "id": "zfTTmRfr9f-n",
         "colab_type": "code",
         "colab": {}
       },
@@ -75,7 +88,7 @@
         "class Doctor:\n",
         "  def __init__(self,name):\n",
         "    self.name = name\n",
-        "    self.timeslot = {'9:00':'','9:30':'','10:00':'','10:30':'','11:00':'','11:30':'','12:00':'','12:30':'','1:00':'','1:30':'','2:00':'','2:30':'','3:00':'','3:30':'','4:30':'','5:00':''}\n"
+        "    self.timeslot = {'9:00':'','9:30':'','10:00':'','10:30':'','11:00':'','11:30':'','12:00':'','12:30':'','1:00':'','1:30':'','2:00':'','2:30':'','3:00':'','3:30':'','4:30':'','5:00':''}"
       ],
       "execution_count": 0,
       "outputs": []
@@ -83,26 +96,9 @@
     {
       "cell_type": "code",
       "metadata": {
-        "id": "zo4RsVQrdPpB",
+        "id": "ZBJOtNv99gAt",
         "colab_type": "code",
         "colab": {}
-      },
-      "source": [
-        ""
-      ],
-      "execution_count": 0,
-      "outputs": []
-    },
-    {
-      "cell_type": "code",
-      "metadata": {
-        "id": "AGOc1IH4KUTg",
-        "colab_type": "code",
-        "outputId": "e9c8b516-c9ed-4da0-bfd8-b013b300d43c",
-        "colab": {
-          "base_uri": "https://localhost:8080/",
-          "height": 476
-        }
       },
       "source": [
         "jill = Doctor('Dr. Jill')\n",
@@ -144,54 +140,7 @@
         "#option to book additional appointment with a reason time between the next appointment.\n",
         "  again = input('Is there another patient who want to schedule an appointment?')\n",
         "  if again != 'yes':\n",
-        "    break\n"
-      ],
-      "execution_count": 0,
-      "outputs": [
-        {
-          "output_type": "stream",
-          "text": [
-            "Do you want to schedule an appointment with Dr. Jill or Dr. Ken?Dr.Ken\n",
-            "What is your name? m\n",
-            "what time do you want to schedule your appointment? 9:00\n",
-            "m is now scheduled to an appointment at 9:00\n",
-            "Is there another patient who want to schedule an appointment?yes\n",
-            "Do you want to schedule an appointment with Dr. Jill or Dr. Ken?n\n",
-            "What is your name? n\n",
-            "what time do you want to schedule your appointment? 9:00\n",
-            "this date is not avaliable. We have these times open:\n",
-            "9:30\n",
-            "10:00\n",
-            "10:30\n",
-            "11:00\n",
-            "11:30\n",
-            "12:00\n",
-            "12:30\n",
-            "1:00\n",
-            "1:30\n",
-            "2:00\n",
-            "2:30\n",
-            "3:00\n",
-            "3:30\n",
-            "4:30\n",
-            "5:00\n",
-            "select another time: 9:30\n",
-            "n is now scheduled to an appointment at 9:30\n",
-            "Is there another patient who want to schedule an appointment?no\n"
-          ],
-          "name": "stdout"
-        }
-      ]
-    },
-    {
-      "cell_type": "code",
-      "metadata": {
-        "id": "25q3VIkZKmAT",
-        "colab_type": "code",
-        "colab": {}
-      },
-      "source": [
-        ""
+        "    break"
       ],
       "execution_count": 0,
       "outputs": []
